@@ -1,0 +1,12 @@
+.env
+*.env
+__pycache__/
+*.pyc
+venv/
+.venv/
+node_modules/
+dist/
+schema_vector_db/
+docs_vector_db/
+*.log
+.DS_Store
