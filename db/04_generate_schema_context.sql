@@ -4,7 +4,7 @@
 -- always match the live database. Regenerate it after any DDL change.
 --
 -- Usage (the -N -B --raw flags strip headers, borders and escaping):
---   mysql -u root -p -N -B --raw northwind_ai \
+--   mysql -u root -p -N -B --raw CapstoneCore \
 --         < 04_generate_schema_context.sql > ../docs/schema_context.md
 --
 -- Business meaning comes from the COMMENT clauses in 01_schema.sql, so
@@ -17,7 +17,7 @@ SELECT line FROM (
            '# Database Schema Context' AS line
     UNION ALL SELECT 0, '', 1, ''
     UNION ALL SELECT 0, '', 2,
-        'Database: northwind_ai (MySQL 8). All identifiers are lowercase.'
+        'Database: CapstoneCore (MySQL 8). All identifiers are lowercase.'
     UNION ALL SELECT 0, '', 3, ''
 
     -- one heading per table

@@ -1,0 +1,149 @@
+CONTOSO TRADING SERVICES
+RETURNS AND REFUNDS POLICY
+
+Document Reference : CTS-POL-004
+Version            : 3.1
+Effective Date     : 01 January 2026
+Review Date        : 31 December 2026
+Owner              : Customer Operations
+Approved By        : Margaret Hale, VP Sales
+
+
+1. PURPOSE AND SCOPE
+
+This policy sets out the conditions under which Contoso Trading Services
+accepts the return of goods sold to business customers, and the basis on
+which refunds are calculated and paid. It applies to all products in the
+Electronics, Office Furniture, Computer Accessories, Networking, Printers
+and Scanners, Storage Devices, Software Licenses and Consumables
+categories, across all four sales regions.
+
+This policy covers commercial returns only. Faults arising after the
+return window has closed are handled under document CTS-POL-007, Product
+Warranty Terms.
+
+
+2. RETURN WINDOW
+
+2.1  The standard return window is 30 calendar days from the date of
+     delivery. A return request raised after day 30 will be rejected
+     automatically by the returns system.
+
+2.2  For orders shipped to the Middle East region, the window is extended
+     to 45 calendar days to allow for longer transit and customs clearance
+     times.
+
+2.3  Goods that arrive damaged must be reported within 5 business days of
+     delivery, with photographic evidence, otherwise the claim is treated
+     as a change-of-mind return under section 4.2.
+
+2.4  The delivery date recorded in the order management system is the
+     authoritative date for calculating the window. Customer-side receipt
+     dates are not accepted as evidence.
+
+
+3. ELIGIBILITY
+
+3.1  Goods must be returned in their original packaging, complete with all
+     accessories, manuals, cables and license cards.
+
+3.2  The following items are NOT returnable under any circumstances:
+
+     (a) Consumables where the sealed packaging has been opened, including
+         toner cartridges, drum units and printing paper.
+     (b) Software licenses where the activation key has been issued or
+         redeemed.
+     (c) Office furniture that has been built to a custom specification,
+         including bespoke modular workstations and acoustic meeting pods.
+     (d) Products marked as discontinued at the time of the return request.
+     (e) Any product sold as clearance or ex-demonstration stock.
+
+3.3  Partial returns are permitted. A customer may return part of the
+     quantity on an order line without returning the whole line.
+
+
+4. REFUND CALCULATION
+
+4.1  Where the return reason is DAMAGED, WRONG_ITEM or NOT_AS_DESCRIBED,
+     the customer receives a full refund of the line value, calculated as
+     the returned quantity multiplied by the unit price actually charged,
+     less any discount that was applied to that line. No restocking fee
+     is charged.
+
+4.2  Where the return reason is CHANGED_MIND, a restocking fee of 15 per
+     cent of the line value is deducted from the refund. The customer
+     therefore receives 85 per cent of the calculated line value.
+
+4.3  Where the return reason is LATE_DELIVERY, the refund is issued in
+     full and the freight charge on the original order is also credited.
+
+4.4  Freight charges are not otherwise refundable.
+
+4.5  Refunds are issued to the original payment method. Where the original
+     payment was made by cheque, the refund is issued by bank transfer.
+
+
+5. RETURN AUTHORISATION PROCESS
+
+5.1  The customer raises a return request through their account executive
+     or the customer portal, quoting the original order number.
+
+5.2  Customer Operations issues a Return Material Authorisation number
+     within 2 business days. Goods received without an RMA number
+     referenced on the outer packaging will be refused at the dock.
+
+5.3  Returned goods are inspected within 3 business days of receipt at
+     the regional warehouse.
+
+5.4  The return is then recorded with one of three statuses:
+
+     Approved  - inspection passed, refund proceeds
+     Pending   - awaiting further information from the customer
+     Rejected  - the goods failed inspection or fell outside this policy
+
+5.5  Refunds are paid within 7 business days of a return moving to
+     Approved status.
+
+
+6. RETURN SHIPPING COSTS
+
+6.1  Contoso Trading Services pays return freight where the reason code is
+     DAMAGED, WRONG_ITEM, NOT_AS_DESCRIBED or LATE_DELIVERY.
+
+6.2  The customer pays return freight for CHANGED_MIND returns.
+
+6.3  Returns of items weighing more than 30 kilograms, or of any item in
+     the Office Furniture category, must be collected by our nominated
+     carrier and must not be sent by the customer's own courier.
+
+
+7. REASON CODES
+
+The following reason codes are the only values accepted by the returns
+system. Account executives must select the closest match; free-text
+reasons are not recorded.
+
+     DAMAGED           Goods physically damaged in transit or on arrival
+     WRONG_ITEM        A product other than the one ordered was shipped
+     NOT_AS_DESCRIBED  Specification differs from the published details
+     LATE_DELIVERY     Delivered after the required date on the order
+     CHANGED_MIND      Customer no longer requires the goods
+
+
+8. ESCALATION
+
+8.1  A rejected return may be escalated to the Regional Sales Manager for
+     the customer's region within 10 business days of the rejection.
+
+8.2  Disputes not resolved at regional level are referred to the VP Sales.
+     The decision of the VP Sales is final.
+
+
+9. RECORD KEEPING
+
+All return records, including the reason code, quantity, refund amount and
+final status, are retained for 7 years in line with the company's
+financial record retention schedule.
+
+
+-- END OF DOCUMENT --
