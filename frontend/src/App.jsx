@@ -15,7 +15,15 @@ function App() {
     <div id="app-shell">
       <header>
         <h1>Enterprise AI Data Assistant</h1>
-        <p className="hint">Contoso Trading Services — capstone demo</p>
+        <p className="hint">
+          Ask a business question in plain English — get back the SQL, a
+          short explanation, and the live results from the database. Or chat
+          with the ingested policy documents.
+        </p>
+        <div className="model-badge">
+          <span className="model-dot" />
+          GROQ · GPT-OSS-20B
+        </div>
       </header>
 
       <nav className="tabs">

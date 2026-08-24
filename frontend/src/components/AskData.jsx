@@ -1,6 +1,30 @@
 import { useState } from 'react'
 import { askQuestion } from '../api.js'
 
+// Purely presentational: highlights common SQL keywords in the generated
+// SELECT statement so the display block reads more like a code editor.
+// Does not touch the query itself or how it's executed.
+const SQL_KEYWORDS = new Set([
+  'SELECT', 'FROM', 'WHERE', 'JOIN', 'LEFT', 'RIGHT', 'INNER', 'OUTER',
+  'FULL', 'ON', 'GROUP', 'ORDER', 'BY', 'AS', 'AND', 'OR', 'NOT', 'IN',
+  'LIKE', 'LIMIT', 'DISTINCT', 'HAVING', 'CASE', 'WHEN', 'THEN', 'ELSE',
+  'END', 'NULL', 'IS', 'BETWEEN', 'UNION', 'ALL', 'DESC', 'ASC', 'COUNT',
+  'SUM', 'AVG', 'MIN', 'MAX', 'COALESCE',
+])
+
+function highlightSql(sql) {
+  return sql.split(/(\s+|[(),;])/).map((token, i) => {
+    if (SQL_KEYWORDS.has(token.toUpperCase())) {
+      return (
+        <span key={i} className="sql-kw">
+          {token}
+        </span>
+      )
+    }
+    return token
+  })
+}
+
 // FastAPI's explain.py returns a "structured" explanation as a JSON object,
 // not a fixed set of fields, so this renders whatever keys it contains
 // instead of assuming a specific shape.
@@ -92,14 +116,29 @@ export default function AskData() {
       {result && (
         <div className="result stack">
           {result.sql && (
-            <div>
+            <div className="result-block">
               <h3>Generated SQL</h3>
-              <pre>{result.sql}</pre>
+              <pre className="sql-block">
+                <code>{highlightSql(result.sql)}</code>
+              </pre>
             </div>
           )}
 
+          {result.explanation != null && (
+            <div className="result-block explanation-card">
+              <h3>Explanation</h3>
+              <ExplanationBlock data={result.explanation} />
+            </div>
+          )}
+
+          {result.explanation_error && (
+            <p className="hint">
+              (Explanation unavailable: {result.explanation_error})
+            </p>
+          )}
+
           {Array.isArray(result.rows) && (
-            <div>
+            <div className="result-block">
               <h3>
                 Results ({result.row_count ?? result.rows.length} row
                 {(result.row_count ?? result.rows.length) === 1 ? '' : 's'})
@@ -125,19 +164,6 @@ export default function AskData() {
                 </table>
               </div>
             </div>
-          )}
-
-          {result.explanation != null && (
-            <div>
-              <h3>Explanation</h3>
-              <ExplanationBlock data={result.explanation} />
-            </div>
-          )}
-
-          {result.explanation_error && (
-            <p className="hint">
-              (Explanation unavailable: {result.explanation_error})
-            </p>
           )}
         </div>
       )}

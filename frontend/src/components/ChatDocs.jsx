@@ -45,10 +45,18 @@ export default function ChatDocs() {
         {messages.length === 0 && <p className="hint">No messages yet.</p>}
         {messages.map((m, i) => (
           <div key={i} className={`chat-msg chat-msg-${m.role}`}>
-            <strong>{m.role === 'user' ? 'You' : 'Assistant'}:</strong>{' '}
-            <span>{m.content}</span>
+            <span className="chat-role">
+              {m.role === 'user' ? 'You' : 'Assistant'}
+            </span>
+            <p className="chat-text">{m.content}</p>
             {m.sources && m.sources.length > 0 && (
-              <div className="hint">Sources: {m.sources.join(', ')}</div>
+              <div className="chat-sources">
+                {m.sources.map((s, si) => (
+                  <span key={si} className="source-chip">
+                    {s}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
         ))}
